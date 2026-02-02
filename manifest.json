@@ -1,0 +1,11 @@
+{
+	"id": "discogs-obsidian",
+	"name": "Discogs for Obsidian",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Integrate your Discogs collection into Obsidian with visualization, local caching, and automatic note creation.",
+	"author": "Fagner Candido",
+	"authorUrl": "https://github.com/fagnercandido",
+	"fundingUrl": "https://github.com/sponsors/fagnercandido",
+	"isDesktopOnly": false
+}

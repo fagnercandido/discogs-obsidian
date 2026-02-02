@@ -1,0 +1,139 @@
+/* Discogs Collection View */
+.discogs-view-container {
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.discogs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.discogs-header-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.discogs-toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.discogs-toolbar input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.discogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.discogs-card {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--background-modifier-border);
+}
+
+.discogs-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.discogs-card-img-container {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-color: var(--background-secondary-alt);
+}
+
+.discogs-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.discogs-badge {
+    position: absolute;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.new-badge {
+    top: 8px;
+    left: 8px;
+    background-color: var(--color-green);
+    color: white;
+}
+
+.note-badge {
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.discogs-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: white;
+    font-size: 12px;
+}
+
+.discogs-card:hover .discogs-card-overlay {
+    opacity: 1;
+}
+
+.discogs-card-info {
+    padding: 10px;
+}
+
+.discogs-card-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discogs-card-artist {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .discogs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .discogs-card-title {
+        font-size: 12px;
+    }
+}
