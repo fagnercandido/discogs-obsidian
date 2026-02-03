@@ -7,8 +7,8 @@ export function t(key: string, ...args: unknown[]): string {
     let lang = locale || 'en';
 
     if (!resources[lang]) {
-        if (lang.includes('-')) {
-            lang = lang.split('-')[0];
+        if (lang && lang.includes('-')) {
+            lang = lang.split('-')[0] || 'en';
         }
         if (!resources[lang]) {
             lang = 'en';

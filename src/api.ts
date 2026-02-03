@@ -84,7 +84,7 @@ export class DiscogsAPI {
             } while (page <= totalPages);
 
         } catch (error: unknown) {
-            new Notice(`Error fetching collection: ${error.message}`);
+            new Notice(`Error fetching collection: ${(error as any).message}`);
             throw error;
         }
 

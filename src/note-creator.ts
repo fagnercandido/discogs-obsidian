@@ -104,7 +104,7 @@ discogs_url: "https://www.discogs.com/release/${album.id}"
         new Notice(`Note created: ${file.basename}`);
         return file;
     } catch (e: unknown) {
-        new Notice(`Failed to create note: ${e.message}`);
+        new Notice(`Failed to create note: ${(e as any).message}`);
         console.error(e);
         return null;
     }
