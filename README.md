@@ -1,4 +1,5 @@
 # Discogs Obsidian Plugin
+# This plugin was generated with Antigravity.
 
 [![Languages](https://img.shields.io/badge/Languages-English%20%7C%20Portuguese-blue)](README.md)
 
